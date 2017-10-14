@@ -8,7 +8,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node /jpntext-host/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
