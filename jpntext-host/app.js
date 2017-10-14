@@ -20,9 +20,9 @@ var app = express();
 // app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../')));
 
-app.post('/', (req, res, next) => {
+app.post('/save/', (req, res, next) => {
 	// console.log(req);
 	// fs.writeFile('log.txt', util.inspect(req), 'utf8');
 
@@ -42,7 +42,7 @@ app.post('/', (req, res, next) => {
 
 	var imageBuffer = decodeBase64Image(req.body.img);
 	// let buf = new Buffer(data, 'base64');
-	fs.writeFile(`chara/${req.body.chara}-${req.body.index}.png`, imageBuffer.data, 'base64', (err) => {
+	fs.writeFile(`${req.body.type}/${req.body.count}-${req.body.chara}-${req.body.index}.png`, imageBuffer.data, 'base64', (err) => {
 		if(err)
 			console.error(err);
 
@@ -57,7 +57,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = 3002;
+var port = 3000;
 app.set('port', port);
 
 app.listen(port, function () {

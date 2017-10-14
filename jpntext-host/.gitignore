@@ -40,3 +40,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# data files
+/chara
+/kanji
+/kanji-extended
+/kanji-full
