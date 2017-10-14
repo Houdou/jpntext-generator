@@ -42,7 +42,7 @@ app.post('/save/', (req, res, next) => {
 
 	var imageBuffer = decodeBase64Image(req.body.img);
 	// let buf = new Buffer(data, 'base64');
-	fs.writeFile(`${req.body.type}/${req.body.count}-${req.body.chara}-${req.body.index}.png`, imageBuffer.data, 'base64', (err) => {
+	fs.writeFile(`${req.body.type}/${req.body.count}-${req.body.chara}-${req.body.index}-${req.body.sample}.png`, imageBuffer.data, 'base64', (err) => {
 		if(err)
 			console.error(err);
 

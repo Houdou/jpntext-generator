@@ -265,7 +265,8 @@ function init() {
 				xhr.open('POST', 'http://localhost:3000/save/', true);
 				// xhr.setRequestHeader("Content-Encoding", "base64");
 				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-				xhr.send(`type=${type}&count=${currentIndex}&chara=${list[currentIndex]}&index=${currentIndex%10}&img=${dt}`);
+				let sample = currentIndex%repeat;
+				xhr.send(`type=${type}&count=${currentIndex}&chara=${list[currentIndex]}&index=${(currentIndex-sample)/repeat}&sample=${sample}&img=${dt}`);
 			}));
 		}
 
