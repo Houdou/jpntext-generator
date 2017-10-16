@@ -11,10 +11,23 @@
 			padding: 0;
 			box-sizing: border-box;
 		}
+		.wrapper {
+			margin: 20px;
+		}
+		.start {
+			margin-top: 16px;
+			width: 64px;
+			height: 32px;
+			background-color: white;
+			border: none;
+		}
 	</style>
 </head>
 <body onload="init()">
-	<canvas id="canvas" width="128" height="128"></canvas>
-	<div id="data" style="word-wrap: break-word;"></div>
+	<div class="wrapper">
+		<canvas id="canvas" width="128" height="128"></canvas>
+		<div id="data" style="word-wrap: break-word;"></div>
+		<input type="button" onclick="start()" value="Start"/ class="start">
+	</div>
 </body>
 </html>
